@@ -1,0 +1,15 @@
+{
+  "name": "shoppinglist-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "iamgerwin",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^2.0.5",
+    "lint": "^1.1.2"
+  }
+}
