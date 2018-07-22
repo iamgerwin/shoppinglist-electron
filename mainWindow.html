@@ -16,6 +16,7 @@
         const {ipcRenderer} = electron;
         const ul = document.querySelector('ul');
 
+        // catch add item
         ipcRenderer.on('item:add', (e, item) => {
             const li = document.createElement('li');
             const itemText = document.createTextNode(item);
@@ -23,6 +24,17 @@
             li.appendChild(itemText);
             ul.appendChild(li);
         });
+
+        // clear items
+        ipcRenderer.on('item:clear', (e, item) => {
+            ul.innerHTML = '';
+        });
+
+        // remove items
+        ul.addEventListener('dblclick', (e) =>{
+            e.target.remove();
+        });
+
   </script>
 </body>
 </html>
